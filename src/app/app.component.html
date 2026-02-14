@@ -5,8 +5,14 @@
     <h1 class="text-center">
       Posts
     </h1>
-    <div class="col-4 mb-3"  *ngFor="let post of postArr">
+    <!-- <div class="col-4 mb-3"  *ngFor="let post of postArr">
       <app-post [post]="post"></app-post>
-    </div>
+    </div> -->
+    @for (post of postArr; track post) {
+  <div class="col-4 mb-3">
+    <app-post [post]="post"></app-post>
+  </div>
+}
+
   </div>
 </div>
